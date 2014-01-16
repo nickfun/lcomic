@@ -1,0 +1,4 @@
+lcomic
+======
+
+Simple webcomic manager
