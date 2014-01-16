@@ -29,6 +29,9 @@ Login to LCOMIC
 
 @elseif( $show == 'success' )
 <strong>you are now logged in</strong>
+
+@elseif( $show == 'fail' )
+<strong>Login Failed</strong>
 @endif
 
 @stop
