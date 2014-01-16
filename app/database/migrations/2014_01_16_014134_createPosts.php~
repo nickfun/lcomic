@@ -1,0 +1,39 @@
+<?php
+
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Database\Migrations\Migration;
+
+class CreatePosts extends Migration {
+
+	/**
+	 * Run the migrations.
+	 *
+	 * @return void
+	 */
+	public function up()
+	{
+		Schema::create('posts', function(Blueprint $table)
+		{
+			$table->increments('id');
+			$table->string("title");
+			$table->int("before");
+			$table->int("after");
+			$table->int("bookid");
+			$table->int("authorid");
+			$table->string("file", 64);
+			$table->timestamps();
+			$table->index('bookid');
+		});
+	}
+
+	/**
+	 * Reverse the migrations.
+	 *
+	 * @return void
+	 */
+	public function down()
+	{
+		Schema::drop('posts');
+	}
+
+}

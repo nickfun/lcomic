@@ -19,6 +19,17 @@ class CreateUsers extends Migration {
 		    $table->string('email', 64);
 		    $table->timestamps();
 		});
+
+		$sDateFormat = 'Y-m-d h:i:s';
+
+		// make a default admin user
+		DB::table('users')->insertGetId(array(
+			'username' => 'admin',
+			'password' => Hash::make('password1'),
+			'email' => 'hello@nick.gs',
+			'created_at' => date($sDateFormat),
+			'updated_at' => date($sDateFormat),
+			));
 	}
 
 	/**
