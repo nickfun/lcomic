@@ -55,12 +55,12 @@ return array(
 		'mysql' => array(
 			'driver'    => 'mysql',
 			'host'      => 'localhost',
-			'database'  => 'database',
+			'database'  => 'lcomic',
 			'username'  => 'root',
-			'password'  => '',
+			'password'  => 'securedatabase',
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
-			'prefix'    => '',
+			'prefix'    => 'lc_',
 		),
 
 		'pgsql' => array(
@@ -96,7 +96,7 @@ return array(
 	|
 	*/
 
-	'migrations' => 'migrations',
+	'migrations' => '__migrations',
 
 	/*
 	|--------------------------------------------------------------------------
