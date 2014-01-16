@@ -4,15 +4,32 @@
 Login to LCOMIC
 @stop
 
+@section('head')
+<style>
+  label { display: block; }
+</style>
+@stop
+
 @section('body')
+
+
+@if( $show == 'form' )
 <form method="post" action="/auth/login">
+  <fieldset>
+    <legend>Login to the comic system</legend>
   <label>Username
     <input type="text" name="username" required>
   </label>
   <label>Password
-    <input type="text" name="password" required>
+    <input type="password" name="password" required>
   </label>
   <button>Login</button>
+</fieldset>
 </form>
+
+@elseif( $show == 'success' )
+<strong>you are now logged in</strong>
+@endif
+
 @stop
 

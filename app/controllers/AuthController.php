@@ -15,7 +15,7 @@ class AuthController extends \BaseController {
 
 	public function postLogin() {
 	    $data = array('show' => 'success');
-	    return View::make('index', $data);
+	    return View::make('login', $data);
 	}
 
 }
