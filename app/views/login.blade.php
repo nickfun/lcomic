@@ -40,6 +40,9 @@ Login to LCOMIC
 
 <footer>
 <a href="/auth">Login Home</a>
+@if( Auth::check() )
+<a href="/auth/logout">Log Out</a>
+@endif
 </footer>
 
 @stop

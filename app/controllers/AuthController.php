@@ -33,4 +33,15 @@ class AuthController extends \BaseController {
 	    }
 	}
 
+	public function getLogout() {
+	    if( Auth::check() ) {
+		Auth::logout();
+		Session::flash('msg', 'You are logged out of the system');
+		return View::make('login', ['show'=>'form']);
+	    } else {
+		Session::flash('msg', 'You are already logged out');
+		return View::make('login', ['show'=>'form']);
+	    }
+	}
+
 }
