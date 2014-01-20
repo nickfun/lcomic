@@ -29,7 +29,7 @@ class CreateUsers extends Migration {
 			'email' => 'hello@nick.gs',
 			'created_at' => date($sDateFormat),
 			'updated_at' => date($sDateFormat),
-			));
+		));
 	}
 
 	/**
