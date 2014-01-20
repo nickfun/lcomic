@@ -12,6 +12,10 @@ Login to LCOMIC
 
 @section('body')
 
+@if( Session::has('msg') )
+<div class="alert alert-info">{{ Session::get('msg') }}</div>
+@endif
+
 
 @if( $show == 'form' )
 <form method="post" action="/auth/login">
@@ -33,6 +37,10 @@ Login to LCOMIC
 @elseif( $show == 'fail' )
 <strong>Login Failed</strong>
 @endif
+
+<footer>
+<a href="/auth">Login Home</a>
+</footer>
 
 @stop
 
