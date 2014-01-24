@@ -10,5 +10,20 @@
 <body>
   <h1>@yield('title')</h1>
   @yield('body')
+
+
+<footer>
+<ul class="nav nav-tabs">
+  <li><a href="/">Home</a></li>
+@if( Auth::check() )
+<li><a href="/auth/logout">Log Out</a></li>
+@else
+<li><a href="/auth/">Log In</a></li>
+@endif
+
+</ul>
+</footer>
+
+
 </body>
 </html>

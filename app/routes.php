@@ -17,3 +17,4 @@ Route::get('/', function()
 });
 
 Route::controller('auth', 'AuthController');
+Route::controller('admin', 'AdminController');
